@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,11 @@ export default function RootLayout({ children }) {
         <header className="flex p-8 items-center justify-center bg-emrald-950 text-white text-2xl">
           APP ROUTER
         </header>
+        <nav className="flex items-center justify-center gap-6">
+          <Link href="/">Ana Sayfa</Link>
+          <Link href="/about">Hakkında</Link>
+          <Link href="/posts">Blog</Link>
+        </nav>
         {children}
       </body>
     </html>
